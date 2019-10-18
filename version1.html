@@ -4,7 +4,23 @@
 function fibonacci (number) {
      //if number is 1 or 2  return 1
      //otherwise return sum of fibonacci of previous two numbers
-     }
+    this.looping = function(n){
+        var a = 0, b = 1, f = 1;
+        for(var i =2; i<=n;i++){
+            f = a +b;
+            a = b;
+            b = f;
+        }
+        return f;
+    };
+    this.recursive = function(n){
+        if(n <= 2){
+            return 1;
+            } else {
+                return this.recursive(n-1) = this.recursive(n - 2);
+            }
+    };
+}
 
 function compute_and_display () {
      // get value from input
